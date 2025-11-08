@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         //Referencias a los elementos de UX
-        val txtnum1 = findViewById<EditText>(R.id.txtNumero1)
-        val txtnum2 = findViewById<EditText>(R.id.txtNumero2)
+        val txtnum1 = findViewById<EditText>(R.id.txtNumero1)   //Constantes VAL (inmutables)
+        val txtnum2 = findViewById<EditText>(R.id.txtNumero2)   //Variables VAR (mutables)
         val txtResultado = findViewById<TextView>(R.id.txtResultado)
         val btnSumar = findViewById<Button>(R.id.btnSumar)
         val btnRestar = findViewById<Button>(R.id.btnRestar)
@@ -59,6 +59,18 @@ class MainActivity : ComponentActivity() {
             val (a, b) = obtenerNumeros()
             if (a != null && b != null) {
                 txtResultado.text = "Resultado: ${a * b}"
+            }
+        }
+        //evento dividir
+        btnDividir.setOnClickListener {
+            val (a, b) = obtenerNumeros()
+            if (a != null && b != null) {
+                if (b == 0.0) {
+                    Toast.makeText(this, "No se puede dividir por cero", Toast.LENGTH_SHORT).show()
+                    txtResultado.text="la division por cero no se puede realizar"
+                } else{
+                    txtResultado.text = "Resultado: ${a / b}"
+                }
             }
         }
     }

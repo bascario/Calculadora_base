@@ -23,7 +23,7 @@
         android:layout_height="96dp"
         android:ems="10"
         android:hint="@string/text_num1"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
@@ -33,7 +33,7 @@
         android:layout_height="105dp"
         android:ems="10"
         android:hint="@string/text_num2"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
