@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
+    >
+
+    <TextView
+        android:id="@+id/txtPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_principal"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtNumero1"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:ems="10"
+        android:hint="@string/text_num1"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/txtNumero2"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:ems="10"
+        android:hint="@string/text_num2"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSumar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnSumar" />
+
+            <Button
+                android:id="@+id/btnRestar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnRestar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMultiplicar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnMultiplicar" />
+
+            <Button
+                android:id="@+id/btnDividir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnDividir" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+</LinearLayout>
