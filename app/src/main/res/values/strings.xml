@@ -7,4 +7,5 @@
     <string name="btnRestar">Restar</string>
     <string name="btnMultiplicar">Multiplicar</string>
     <string name="btnDividir">Dividir</string>
+    <string name="btnFactorial">Factorial</string>
 </resources>

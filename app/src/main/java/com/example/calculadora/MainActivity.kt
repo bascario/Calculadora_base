@@ -30,6 +30,8 @@ class MainActivity : ComponentActivity() {
         val btnRestar = findViewById<Button>(R.id.btnRestar)
         val btnMultiplicar = findViewById<Button>(R.id.btnMultiplicar)
         val btnDividir = findViewById<Button>(R.id.btnDividir)
+        val btnFactorial = findViewById<Button>(R.id.btnFactorial)
+
         //funciones auxiliares para valiudar la entrada
         fun obtenerNumeros(): Pair<Double?, Double?> {
             val num1 = txtnum1.text.toString()
@@ -73,5 +75,28 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        //evento factorial
+        btnFactorial.setOnClickListener {
+            val num1 = txtnum1.text.toString()
+            if (num1.isEmpty()) {
+                Toast.makeText(this, "Ingrese un número", Toast.LENGTH_SHORT).show()
+            } else {
+                val n = num1.toIntOrNull()
+                if (n == null||n<0) {
+                    Toast.makeText(this, "Ingrese un número entero positivo", Toast.LENGTH_SHORT)
+                        .show()
+                }else{
+                val resultado = calcularFactorial(n)
+                txtResultado.text = "Resultado: $n! = $resultado"
+            }
+        }
+    }
+}
+private fun calcularFactorial(n: Int): Long {
+    var resultado = 1L //var es mutable y val es inmutable
+    for(i in 1..n){
+        resultado *= i
+    }
+    return resultado
     }
 }
